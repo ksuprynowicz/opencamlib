@@ -51,12 +51,12 @@ message(STATUS " CPACK_DEBIAN_DISTRIBUTION_RELEASES : ${CPACK_DEBIAN_DISTRIBUTIO
 
 message(STATUS " CMAKE_SOURCE_DIR is = " ${CMAKE_SOURCE_DIR})
 if(${SRC_DIR} MATCHES "")
-    set(CPACK_PACKAGE_DESCRIPTION_FILE ${SRC_DIR}/deb/debian_package_description.txt CACHE STRING "package description file")
-    set(CPACK_RESOURCE_FILE_LICENSE ${SRC_DIR}/deb/debian_copyright.txt CACHE STRING "name11")
+    set(CPACK_PACKAGE_DESCRIPTION_FILE ${SRC_DIR}/src/deb/debian_package_description.txt CACHE STRING "package description file")
+    set(CPACK_RESOURCE_FILE_LICENSE ${SRC_DIR}/src/deb/debian_copyright.txt CACHE STRING "name11")
     set(DEB_SRC_DIR ${SRC_DIR} CACHE STRING "name13" )
 else(${SRC_DIR} MATCHES "")
-    set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_SOURCE_DIR}/deb/debian_package_description.txt CACHE STRING "package description file")
-    set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/deb/debian_copyright.txt CACHE STRING "name11")
+    set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_SOURCE_DIR}/src/deb/debian_package_description.txt CACHE STRING "package description file")
+    set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/src/deb/debian_copyright.txt CACHE STRING "name11")
     set(DEB_SRC_DIR ${CMAKE_SOURCE_DIR} CACHE STRING "name13" )
 endif(${SRC_DIR} MATCHES "")
 
