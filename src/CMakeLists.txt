@@ -421,6 +421,7 @@ IF (DOXYGEN_FOUND)
 ENDIF(DOXYGEN_FOUND)
 endif (BUILD_DOC)
 
+<<<<<<< HEAD
 include(${CMAKE_SOURCE_DIR}/src/deb/package_details.cmake)
 
 # "make spackage"
@@ -431,6 +432,18 @@ add_custom_target(spackage
               -C ${CMAKE_SOURCE_DIR}/src/deb/package_details.cmake
               -P ${CMAKE_CURRENT_SOURCE_DIR}/src/deb/DebSourcePPA.cmake 
             ) 
+=======
+#include(${CMAKE_SOURCE_DIR}/deb/package_details.cmake)
+
+# "make spackage"
+#add_custom_target(spackage 
+#              ${CMAKE_COMMAND} 
+#              -D SRC_DIR:STRING=${CMAKE_SOURCE_DIR} 
+#              -D MY_VERSION:STRING=${MY_VERSION} 
+#              -C ${CMAKE_SOURCE_DIR}/deb/package_details.cmake
+#              -P ${CMAKE_CURRENT_SOURCE_DIR}/deb/DebSourcePPA.cmake 
+#            ) 
+>>>>>>> 0dccde417656163db910a80d9278d70ebffe6ec4
 #add_custom_target(spackage-oneiric
 #              ${CMAKE_COMMAND} 
 #              -D SRC_DIR:STRING=${CMAKE_SOURCE_DIR} 
